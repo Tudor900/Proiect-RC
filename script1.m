@@ -1,4 +1,13 @@
 %Import and Visualize Buildings Data
+figure = figure("Name","Proiect RC", "NumberTitle","off");
+
+panel = uipanel(figure, "Title","Site Viewer");
+
+
+
+
+
+
 
 viewer = siteviewer(Buildings="map(1).osm",Basemap="topographic");
 
@@ -101,12 +110,12 @@ coverage(tx,rtPlusWeather, ...
 
 %View Coverage Map with Two Reflections and One Diffraction
 
-rtPlusWeather.PropagationModels(1).MaxNumReflections = 2;
-rtPlusWeather.PropagationModels(1).MaxNumDiffractions = 1;
-rtPlusWeather.PropagationModels(1).AngularSeparation = "high";
-clearMap(viewer)
-
-show(tx)
+% rtPlusWeather.PropagationModels(1).MaxNumReflections = 2;
+% rtPlusWeather.PropagationModels(1).MaxNumDiffractions = 1;
+% rtPlusWeather.PropagationModels(1).AngularSeparation = "high";
+% clearMap(viewer)
+% 
+% show(tx)
 
 % load("coverageResultsTwoRefOneDiff.mat");
 % contour(coverageResultsTwoRefOneDiff, ...
